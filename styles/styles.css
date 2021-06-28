@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  background-color: #08082f;
+  color: #fafcff;
+}
+
+.main .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1em;
+  margin: 1em;
+}
+
+.main .nav p {
+  margin: 0.5em;
+  font-size: 12px;
+}
+
+.main .nav p a {
+  color: #fafcff;
+  text-decoration: none;
+}
+
+.main form {
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main form input {
+  padding: 15px;
+  outline: none;
+  background-color: #23214b;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  color: white;
+}
+
+.main form button {
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  outline: none;
+  background-color: #1b84e5;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  margin: 3em;
+}
+
+.hero h2 {
+  margin: 0.5em;
+}
+
+.hero h2 i {
+  margin: 0.3em;
+}
+
+.hero p {
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.hero a {
+  margin: 1.5em;
+  text-decoration: none;
+  color: white;
+  padding: 0.3em;
+  background-color: #1b84e5;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.hero a i {
+  margin: 0.5em;
+}
+
+.hero a:hover {
+  background-color: #23214b;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1em;
+}
+
+.container .location h1,
+.container .location h5,
+.container .location h3 {
+  padding: 0.5em;
+}
+
+.container .location h3 {
+  margin: 1em;
+  border-radius: 10px;
+  background-color: #1b84e5;
+}
+
+.container .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: 3s ease-in;
+  transition: 3s ease-in;
+}
+
+.container .weather .temperature,
+.container .weather .humid,
+.container .weather .wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #23214b;
+  padding: 1em;
+  width: 100px;
+  border-radius: 20px;
+  margin: 0.3em;
+  text-align: center;
+}
+
+.container .weather .temperature p,
+.container .weather .humid p,
+.container .weather .wind p {
+  font-size: 12px;
+}
+
+.container .weather .temperature span,
+.container .weather .humid span,
+.container .weather .wind span {
+  margin: 0.3em;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 2.5em;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

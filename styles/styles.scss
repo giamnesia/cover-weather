@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+$darkblue: rgb(8, 8, 47);
+$bluecolor: #1b84e5;
+$blackcolor: rgb(35, 33, 75);
+$whitecolor: #fafcff;
+
+@mixin center($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+}
+
+body,
+html {
+  background-color: $darkblue;
+  color: $whitecolor;
+}
+.main {
+  .nav {
+    @include center(column);
+    padding: 1em;
+    margin: 1em;
+    p {
+      margin: 0.5em;
+      font-size: 12px;
+      a {
+        color: $whitecolor;
+        text-decoration: none;
+      }
+    }
+  }
+  form {
+    margin: 1em;
+    @include center(row);
+    input {
+      padding: 15px;
+      outline: none;
+      background-color: $blackcolor;
+      border-radius: 10px 0 0 10px;
+      border: none;
+      color: white;
+    }
+    button {
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      outline: none;
+      background-color: $bluecolor;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+}
+.hero {
+  @include center(column);
+  text-align: center;
+  margin: 3em;
+  h2 {
+    margin: 0.5em;
+    i {
+      margin: 0.3em;
+    }
+  }
+  p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+  a {
+    margin: 1.5em;
+    text-decoration: none;
+    color: white;
+    padding: 0.3em;
+    background-color: $bluecolor;
+    border-radius: 5px;
+    width: 150px;
+    i {
+      margin: 0.5em;
+    }
+    &:hover {
+      background-color: $blackcolor;
+      transition: 0.3s;
+    }
+  }
+}
+.container {
+  .location {
+    @include center(column);
+    padding: 1em;
+    h1,
+    h5,
+    h3 {
+      padding: 0.5em;
+    }
+    h3 {
+      margin: 1em;
+      border-radius: 10px;
+      background-color: $bluecolor;
+    }
+  }
+  .weather {
+    @include center(row);
+    transition: 3s ease-in;
+
+    .temperature,
+    .humid,
+    .wind {
+      @include center(column);
+      background-color: $blackcolor;
+      padding: 1em;
+      width: 100px;
+      border-radius: 20px;
+      margin: 0.3em;
+      text-align: center;
+
+      p {
+        font-size: 12px;
+      }
+      span {
+        margin: 0.3em;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 2.5em;
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
